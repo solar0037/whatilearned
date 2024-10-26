@@ -2,11 +2,12 @@ import streamlit as st
 
 
 def main():
-    st.set_page_config("나는 배웠다")
-    st.title("나는 배웠다")
-    st.write("지금까지 배운 수학, 과학, 공학 분야의 지식을 정리하는 프로젝트입니다.")
-    st.write("사용 기술: Python, Streamlit, Schemdraw 등")
-    st.link_button("GitHub", "https://github.com/solar0037/whatilearned")
+    home_page = st.Page("home.py", title="Home", icon=":material/home:")
+    op_amp_page = st.Page("electronics/op_amp.py", title="Op Amp", icon=":material/add_circle:")
+    sorting_page = st.Page("algorithms/sorting.py", title="Sorting Algorithms", icon=":material/add_circle:")
+
+    pg = st.navigation([home_page, op_amp_page, sorting_page])
+    pg.run()
 
 
 if __name__ == '__main__':
