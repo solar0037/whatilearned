@@ -5,10 +5,12 @@ import matplotlib.pyplot as plt
 
 st.title("Op Amp - Inverting Configuration")
 
+col_slider, col_plot = st.columns(2)
+
 # 사용자 입력 값
-v_in = st.slider("Input Voltage (V)", -10.0, 10.0, 1.0)
-r1 = st.slider("R1 Resistance (Ω)", 1, 10000, 1000)
-r2 = st.slider("R2 Resistance (Ω)", 1, 10000, 1000)
+v_in = col_slider.slider("Input Voltage (V)", -10.0, 10.0, 1.0)
+r1 = col_slider.slider("R1 Resistance (Ω)", 1, 10000, 1000)
+r2 = col_slider.slider("R2 Resistance (Ω)", 1, 10000, 1000)
 
 # 회로 다이어그램 생성
 with schemdraw.Drawing() as d:
@@ -23,7 +25,7 @@ with schemdraw.Drawing() as d:
 
 # Streamlit에 다이어그램 표시
 d.draw()
-st.pyplot(plt.gcf())
+col_plot.pyplot(plt.gcf())
 
 # 회로 분석 결과 출력
 v_out = (r2 / r1) * v_in
