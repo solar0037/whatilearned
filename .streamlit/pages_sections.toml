@@ -5,20 +5,18 @@ icon = "🏠"
 
 [[pages]]
 name = "Electronics"
-icon = "⚡"
+icon = ":zap:"
 is_section = true
 
 [[pages]]
 path = "electronics/op_amp.py"
 name = "Op Amp"
-icon = ":books:"
 
 [[pages]]
 name = "Algorithms"
-icon = "🎈️"
+icon = ":balloon:"
 is_section = true
 
 [[pages]]
 path = "algorithms/sorting.py"
-name = "Sorting"
-icon = "💪"
+name = "Sorting Algorithms"
