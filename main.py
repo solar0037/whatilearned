@@ -1,12 +1,11 @@
 import streamlit as st
+from st_pages import get_nav_from_toml
 
 
 def main():
-    home_page = st.Page("home.py", title="Home", icon=":material/home:")
-    op_amp_page = st.Page("electronics/op_amp.py", title="Op Amp", icon=":material/add_circle:")
-    sorting_page = st.Page("algorithms/sorting.py", title="Sorting Algorithms", icon=":material/add_circle:")
-
-    pg = st.navigation([home_page, op_amp_page, sorting_page])
+    st.set_page_config(layout="wide")
+    nav = get_nav_from_toml(".streamlit/pages_sections.toml")
+    pg = st.navigation(nav)
     pg.run()
 
 

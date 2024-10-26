@@ -3,8 +3,6 @@ import schemdraw
 import schemdraw.elements as elm
 import matplotlib.pyplot as plt
 
-st.set_page_config("Op Amp - Inverting Configuration")
-
 st.title("Op Amp - Inverting Configuration")
 
 # 사용자 입력 값
